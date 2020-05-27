@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 class AccountController extends Controller

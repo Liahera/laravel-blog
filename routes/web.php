@@ -24,13 +24,15 @@ Route::group(['middleware' => 'guest'], function (){
     Route::post('/login', 'Auth\LoginController@login');
 
 });
+//account
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/logout', function(){
         \Auth::logout();
         return redirect(route('login'));
     })->name('logout');
     Route::get('/my/account', 'AccountController@index')->name('account');
-
+// admin
+    Route::get('/admin','Admin\AccountController@index')->name('admin');
 });
 
 
