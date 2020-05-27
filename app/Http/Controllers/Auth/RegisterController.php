@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -29,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/my/account';
 
     /**
      * Create a new controller instance.
@@ -39,6 +42,29 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+    public function register(Request $request)
+    {
+        try {
+            $this->validator($request->all())->validate();
+        }catch(\Exception $e){
+            return back()->with('error', $e->getMessage());
+        }
+
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $isAuth = $request->has('remember') ? true : false;
+        $objUser = $this->create(['email' => $email, 'password' => $password]);
+        if(!($objUser instanceof User)){
+            //throw new \Exception("Can't create object");
+            return back()->with('error', "Can't create object");
+        }
+        if($isAuth){
+            $this->guard()->login($objUser);
+        }
+
+
+        return redirect(route('account'))->with('success', 'Вы успешно зарегистрированны');
     }
 
     /**
@@ -50,7 +76,6 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -65,7 +90,6 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
