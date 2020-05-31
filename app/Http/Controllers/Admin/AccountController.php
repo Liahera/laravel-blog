@@ -7,6 +7,7 @@ class AccountController extends Controller
 {
     public function index()
     {
-       echo "hello admin"; //return view('admin.index');
+        //return view("admin.index");
+        echo 'hello admin';
     }
 }
