@@ -50,13 +50,13 @@
                     <a class="nav-link" href="{!! route('categories') !!}">Категории </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{!! route('articles') !!}">Статьи</a>
+                    <a class="nav-link" href="#">Статьи</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{!! route('users') !!}">Пользователи</a>
+                    <a class="nav-link" href="#">Пользователи</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{!! route('comments') !!}">Комментарии</a>
+                    <a class="nav-link" href="#">Комментарии</a>
                 </li>
             </ul>
 
@@ -75,9 +75,8 @@
 <script src="/js/jquery-3.2.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 @yield('js')
-
 @include('inc.messages')
 
 </body>
