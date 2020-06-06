@@ -1,27 +1,8 @@
 
+@extends('layouts.user')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
-    <title>Регистрация</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-</head>
-
-<body>
-
+@section('content')
 <div class="container">
-
     <form class="form-signin" method="post">
         {!! csrf_field() !!}
         <h2 class="form-signin-heading">Пожалуйста зарегистрируйтесь</h2>
@@ -41,11 +22,5 @@
 
 </div> <!-- /container -->
 
-<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
-
 @include('inc.messages')
-
-
-
-</body>
-</html>
+@endsection

@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ArticlesController@index');
+
+//blog
+Route::get('/article/{id}/{slug}.html', 'ArticlesController@showArticle')->where('id', '\d')->name('blog.show');
 
 Route::group(['middleware' => 'guest'], function (){
     Route::get('/register','Auth\RegisterController@showRegistrationForm')->name('register');

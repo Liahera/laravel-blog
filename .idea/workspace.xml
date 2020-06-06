@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d07c4ec6-7786-468a-925e-f0a746805306" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inc/messages.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/articles/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/articles/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/messages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +164,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog z gita" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -172,6 +176,9 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\views\layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\js" />
       <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\app\Http\Controllers" />
@@ -203,7 +210,10 @@
       <workItem from="1590826358305" duration="2370000" />
       <workItem from="1590923060954" duration="12078000" />
       <workItem from="1590949077017" duration="5781000" />
-      <workItem from="1591030762356" duration="1039000" />
+      <workItem from="1591030762356" duration="12858000" />
+      <workItem from="1591118165315" duration="755000" />
+      <workItem from="1591378240589" duration="5767000" />
+      <workItem from="1591444756342" duration="3905000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1590003047657</created>
@@ -261,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590925714227</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="v2">
+      <created>1591031851323</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591031851323</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,18 +316,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590605049906" />
-    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590084422125">
+    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591446789373">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590084422125" />
-    <state x="465" y="98" width="620" height="628" key="#phpunit.xml" timestamp="1590081925370">
+    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1591446789373" />
+    <state x="465" y="98" width="620" height="628" key="#phpunit.xml" timestamp="1591448786979">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="98" width="620" height="628" key="#phpunit.xml/0.0.1536.824@0.0.1536.824" timestamp="1590081925370" />
-    <state x="397" y="11" key="CommitChangelistDialog2" timestamp="1590925713824">
+    <state x="465" y="98" width="620" height="628" key="#phpunit.xml/0.0.1536.824@0.0.1536.824" timestamp="1591448786979" />
+    <state x="397" y="11" key="CommitChangelistDialog2" timestamp="1591031850808">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590925713824" />
+    <state x="397" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591031850808" />
     <state x="548" y="157" key="FileChooserDialogImpl" timestamp="1590436877197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -331,22 +348,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590923159102" />
-    <state x="441" y="247" key="NewPhpClassDialog" timestamp="1590087691666">
+    <state x="441" y="247" key="NewPhpClassDialog" timestamp="1591384794383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="441" y="247" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1590087691666" />
-    <state x="948" y="424" key="NewPhpFileDialog" timestamp="1590949554737">
+    <state x="441" y="247" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1591384794383" />
+    <state x="948" y="424" key="NewPhpFileDialog" timestamp="1591384786969">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="948" y="424" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1590949554737" />
+    <state x="948" y="424" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1591384786969" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1589998837815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589998837815" />
-    <state x="722" y="151" key="Vcs.Push.Dialog.v2" timestamp="1590005162555">
+    <state x="722" y="151" key="Vcs.Push.Dialog.v2" timestamp="1591031857498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="722" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590005162555" />
+    <state x="722" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591031857498" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590428487562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
