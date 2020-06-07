@@ -51,6 +51,12 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/articles/edit/{id}', 'Admin\ArticlesController@editArticle')->where('id', '\d+')->name('articles.edit');
         Route::post('/articles/edit/{id}', 'Admin\ArticlesController@editRequestArticle')->where('id', '\d+');
         Route::delete('/articles/delete', 'Admin\ArticlesController@deleteArticle')->name('articles.delete');
+        /** Users */
+        Route::get('/users', 'Admin\UsersController@index')->name('users');
+
+        Route::get('/comments', 'Admin\CommentsController@index')->name('comments');
+        Route::get('/comments/accepted/{id}', 'Admin\CommentsController@acceptComment')
+            ->where('id', '\d+')->name('comment.accepted');
     });
 });
 
