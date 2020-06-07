@@ -19,8 +19,10 @@ class CommentsController extends Controller
             'user_id'    => $user_id,
             'comment'    => $comment
         ]);
+//дописать проверку и вивод сообщения про добавление коментария взять пример з артиклсконтролер
 
-        if($objComment) {
+
+if($objComment) {
             return back();
         }
 
