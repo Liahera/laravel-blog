@@ -9,7 +9,7 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
                         <h1>Blog by Serhii Liahera</h1>
-                        <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                        <span class="subheading"></span>
                     </div>
                 </div>
             </div>
@@ -20,20 +20,24 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
+                @foreach($articles as $article)
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="{!! route('blog.show', [
+                       'id'   => $article->id,
+                       'slug' => str_slug($article->title)
+                    ]) !!}">
                             <h2 class="post-title">
-                                man must explore,and
+                               {!! $article->title !!}
                             </h2>
                             <h3 class="post-subtitle">
-                                problem look
+                               {!! $article->short_text !!}
                             </h3>
                         </a>
                         <p class="post-meta">Опубликоал
-                            <a href="#">start bootstrap</a>
-                            </p>
+                            <a href="#">{{$article->author}}</a>
+                            в {!! $article->created_at->format('H:i- d/m/Y') !!}</p>
                     </div>
-
+@endforeach
 
 
 
