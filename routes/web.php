@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth'], function(){
         return redirect(route('login'));
     })->name('logout');
     Route::get('/my/account', 'AccountController@index')->name('account');
+    //comments
+    Route::post('/comments/add', 'CommentsController@addComment')->name('comments.add');
         // admin
     Route::group(['middleware' => 'admin','prefix'=>'admin'], function() {
         Route::get('/', 'Admin\AccountController@index')->name('admin');

@@ -28,5 +28,20 @@
 
             </div>
         </div>
+        <div class="col-md-8 col-md-offset-2">
+        <br><br>
+        <hr>
+        <br>
+        @if(\Auth::check())
+            <form method="post" action="{!! route('comments.add') !!}">
+                {!! csrf_field() !!}
+                <input type="hidden" value="{{$article->id}}" name="article_id">
+                <p>Комментарий:<br>
+                    <textarea class="form-control" name="comment"></textarea></p>
+                <br>
+                <button type="submit" class="btn btn-success" style="cursor:pointer;">Добавить комментарий</button>
+            </form>
+            @endif
+        </div>
     </article>
 @stop
