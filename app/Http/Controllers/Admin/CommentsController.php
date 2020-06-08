@@ -23,4 +23,15 @@ class CommentsController extends Controller
         \DB::table('comments')->where('id', $id)->update(['status' => true]);
         return back();
     }
+    public function deleteComment(Request $request)
+    {
+        if ($request->ajax()) {
+            $id = (int)$request->input('id');
+            $objComment = new Comment();
+
+            $objComment->where('id', $id)->delete();
+
+            echo "success";
+        }
+    }
 }

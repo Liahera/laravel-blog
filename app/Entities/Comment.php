@@ -20,4 +20,6 @@ class Comment extends Model
         'updated_at'
     ];
 
+
+
 }

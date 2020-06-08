@@ -13,6 +13,7 @@
                     <th>Пользователь</th>
                     <th>Коммент</th>
                     <th>Статус</th>
+                    <th>Действие</th>
                     <th>Дата добавления</th>
                 </tr>
                 </thead>
@@ -23,7 +24,9 @@
                         <td>{{_article($comment->article_id)->title}}</td>
                         <td>{{_user($comment->user_id)->email}}</td>
                         <td>{{$comment->comment}}</td>
-                        <td>@if($comment->status) Активен @else На модерации<br><a href="{!! route('comment.accepted', ['id' => $comment->id]) !!}">Одобрить</a> @endif</td>
+                        <td>@if($comment->status) Активен @else На модерации<br> @endif</td>
+                        <td><a href="{!! route('comment.accepted', ['id' => $comment->id]) !!}">Одобрить</a>||
+                        <a href="javascript:;" class="delete" rel="{{$comment->id}}">Удалить</a></td>
                         <td>{!! $comment->created_at->format('d-m-Y H:i') !!}</td>
                     </tr>
                 @endforeach
@@ -32,4 +35,26 @@
             </table>
         </div>
     </main>
+@stop
+@section('js')
+    <script>
+        $(function(){
+            $(".delete").on('click', function () {
+                if(confirm("Вы действительно хотите удалить етот коментарий ?")) {
+                    let id = $(this).attr("rel");
+                    $.ajax({
+                        type: "DELETE",
+                        url: "{!! route('comments.delete') !!}",
+                        data: {_token:"{{csrf_token()}}", id:id},
+                        complete: function() {
+                            alert("Коментарий удален");
+                            location.reload();
+                        }
+                    });
+                }else{
+                    alertify.error("Дествие отменено пользователем");
+                }
+            });
+        });
+    </script>
 @stop

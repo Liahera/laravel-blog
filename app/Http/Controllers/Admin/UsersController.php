@@ -17,6 +17,29 @@ class UsersController extends Controller
         ];
         return view('admin.users.index', $params);
     }
+    public function acceptUsers($id)
+    {
+
+        \DB::table('users')->where('id', $id)->update(['isAdmin' => true]);
+        return back();
+    }
+    public function downUsers($id)
+    {
+
+        \DB::table('users')->where('id', $id)->update(['isAdmin' => 0]);
+        return back();
+    }
+    public function deleteUsers(Request $request)
+    {
+        if ($request->ajax()) {
+            $id = (int)$request->input('id');
+            $objUser = new User();
+
+            $objUser->where('id', $id)->delete();
+
+            echo "success";
+        }
+    }
 
 
 }

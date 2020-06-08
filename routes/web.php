@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/my/account', 'AccountController@index')->name('account');
     //comments
     Route::post('/comments/add', 'CommentsController@addComment')->name('comments.add');
+    Route::delete('/comments/delete', 'Admin\CommentsController@deleteComment')->name('comments.delete');
         // admin
     Route::group(['middleware' => 'admin','prefix'=>'admin'], function() {
         Route::get('/', 'Admin\AccountController@index')->name('admin');
@@ -55,6 +56,11 @@ Route::group(['middleware' => 'auth'], function(){
         Route::delete('/articles/delete', 'Admin\ArticlesController@deleteArticle')->name('articles.delete');
         /** Users */
         Route::get('/users', 'Admin\UsersController@index')->name('users');
+        Route::get('/users/accepted/{id}', 'Admin\UsersController@acceptUsers')
+            ->name('user.accepted');
+        Route::get('/users/down/{id}', 'Admin\UsersController@downUsers')
+            ->name('user.down');
+        Route::delete('/users/delete', 'Admin\UsersController@deleteUsers')->name('users.delete');
 
         Route::get('/comments', 'Admin\CommentsController@index')->name('comments');
         Route::get('/comments/accepted/{id}', 'Admin\CommentsController@acceptComment')

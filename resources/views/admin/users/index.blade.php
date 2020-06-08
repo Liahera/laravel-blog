@@ -10,6 +10,7 @@
                 <th>#</th>
                 <th>E-mail</th>
                 <th>Роль</th>
+                <th>Действие</th>
                 <th>Дата регистрации</th>
 
             </tr>
@@ -18,10 +19,35 @@
                     <td>{{$user->id}}</td>
                     <td>{{$user->email}}</td>
                     <td>@if($user->isAdmin) Администратор @else Пользователь @endif </td>
+                    <td><a href="{!! route('user.accepted', ['id' => $user->id]) !!}">Повысить</a>||
+                        <a href="{!! route('user.down', ['id' => $user->id]) !!}">Понизить</a>||
+                        <a href="javascript:;" class="delete" rel="{{$user->id}}">Удалить</a></td>
                     <td>{{ $user->created_at->format('d-m-Y H:i') }}</td>
 
                 </tr>
             @endforeach
         </table>
     </main>
+@stop
+@section('js')
+    <script>
+        $(function(){
+            $(".delete").on('click', function () {
+                if(confirm("Вы действительно хотите удалить пользователя ?")) {
+                    let id = $(this).attr("rel");
+                    $.ajax({
+                        type: "DELETE",
+                        url: "{!! route('users.delete') !!}",
+                        data: {_token:"{{csrf_token()}}", id:id},
+                        complete: function() {
+                            alert("Пользователь удален");
+                            location.reload();
+                        }
+                    });
+                }else{
+                    alertify.error("Дествие отменено пользователем");
+                }
+            });
+        });
+    </script>
 @stop

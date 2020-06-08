@@ -39,7 +39,13 @@
                     <a class="nav-link" href="/">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">О нас</a>
+                    <a class="nav-link" href="#">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{!! route('login') !!}">Логин</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{!! route('register') !!}">Регистрация</a>
                 </li>
 
 

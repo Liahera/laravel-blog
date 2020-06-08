@@ -29,10 +29,14 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/admin">Главная <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/">На сайт</a>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="#">Профиль</a>
             </li>
+
 
         </ul>
         <form class="form-inline mt-2 mt-md-0">
