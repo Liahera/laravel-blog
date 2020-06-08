@@ -10,4 +10,5 @@
             <button type="submit" class="btn btn-success" style="cursor: pointer; float: right;">Добавить</button>
         </form>
     </main>
+
 @stop

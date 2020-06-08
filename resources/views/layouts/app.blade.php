@@ -110,6 +110,8 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({selector:'textarea'});</script>
 <script src="/blog/vendor/jquery/jquery.min.js"></script>
 <script src="/blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
