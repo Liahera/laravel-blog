@@ -56,7 +56,7 @@
                     <a class="nav-link" href="{!! route('users') !!}">Пользователи</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Комментарии</a>
+                    <a class="nav-link" href="{!! route('comments') !!}">Комментарии</a>
                 </li>
             </ul>
 
