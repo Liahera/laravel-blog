@@ -47,6 +47,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{!! route('register') !!}">Регистрация</a>
                 </li>
+                <li class="nav-item">
+                    @if(\Auth::user()->isAdmin == 1)
+                    <a class="nav-link" href="{!! route('admin') !!}">В админку</a>
+                        @endif
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{!! route('logout') !!}">Выйти</a>
+                </li>
 
 
             </ul>
