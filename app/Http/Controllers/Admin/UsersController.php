@@ -19,14 +19,12 @@ class UsersController extends Controller
     }
     public function acceptUsers($id)
     {
-
-        \DB::table('users')->where('id', $id)->update(['isAdmin' => true]);
+        \DB::table('users')->where('id', $id)->update(['isAdmin' => User::ADMIN_ROLE]);
         return back();
     }
     public function downUsers($id)
     {
-
-        \DB::table('users')->where('id', $id)->update(['isAdmin' => 0]);
+        \DB::table('users')->where('id', $id)->update(['isAdmin' => User::USER_ROLE]);
         return back();
     }
     public function deleteUsers(Request $request)

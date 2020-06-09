@@ -8,6 +8,7 @@
         <table class="table table-bordered">
             <tr>
                 <th>#</th>
+                <th>Username</th>
                 <th>E-mail</th>
                 <th>Роль</th>
                 <th>Действие</th>
@@ -17,6 +18,7 @@
             @foreach($users as $user)
                 <tr>
                     <td>{{$user->id}}</td>
+                    <td>{{$user->username}}</td>
                     <td>{{$user->email}}</td>
                     <td>@if($user->isAdmin) Администратор @else Пользователь @endif </td>
                     <td><a href="{!! route('user.accepted', ['id' => $user->id]) !!}">Повысить</a>||

@@ -6,6 +6,8 @@
     <form class="form-signin" method="post">
         {!! csrf_field() !!}
         <h2 class="form-signin-heading">Пожалуйста зарегистрируйтесь</h2>
+        <label for="username" class="sr-only">Имя</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Имя" required autofocus>
         <label for="inputEmail" class="sr-only">Email адрес</label>
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email адрес" required autofocus>
         <label for="inputPassword" class="sr-only">Пароль</label>

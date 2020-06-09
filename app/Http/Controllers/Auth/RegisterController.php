@@ -51,11 +51,11 @@ class RegisterController extends Controller
         }catch(\Exception $e){
             return back()->with('error', $e->getMessage());
         }
-
+        $username=$request->input('username');
         $email = $request->input('email');
         $password = $request->input('password');
         $isAuth = $request->has('remember') ? true : false;
-        $objUser = $this->create(['email' => $email, 'password' => $password]);
+        $objUser = $this->create(['email' => $email, 'password' => $password,'username'=>$username]);
         if(!($objUser instanceof User)){
             //throw new \Exception("Can't create object");
             return back()->with('error', "Can't create object");
@@ -77,6 +77,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'username'=>['required', 'string', 'min:2','max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -91,6 +92,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'username'=>$data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

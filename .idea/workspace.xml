@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d07c4ec6-7786-468a-925e-f0a746805306" name="Default Changelist" comment="v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/css/clean-blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/css/clean-blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/show_article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show_article.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,12 +174,12 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\views\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\js" />
       <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\app\Http\Controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,7 +213,8 @@
       <workItem from="1591378240589" duration="5767000" />
       <workItem from="1591444756342" duration="4525000" />
       <workItem from="1591521458437" duration="24640000" />
-      <workItem from="1591634611502" duration="13603000" />
+      <workItem from="1591634611502" duration="13842000" />
+      <workItem from="1591712359721" duration="10313000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1590003047657</created>

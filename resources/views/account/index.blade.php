@@ -1,7 +1,7 @@
 
 
 
-<h2>Добро пожаловать, {{\Auth::user()->email}}</h2>
+<h2>Добро пожаловать, {{\Auth::user()->username}}</h2>
 <br>
 <a href="/"> На сайт</a><br>
 @if(\Auth::user()->isAdmin == 1)

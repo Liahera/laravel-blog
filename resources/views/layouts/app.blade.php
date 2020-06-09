@@ -19,7 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="/blog/css/clean-blog.min.css" rel="stylesheet">
+    <link href="/blog/css/clean-blog.css?v=1.2" rel="stylesheet">
 
 </head>
 
@@ -27,7 +27,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
+    <div class="header-menu">
         <a class="navbar-brand" href="/">Serhii Liahera</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -44,20 +44,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{!! route('login') !!}">Логин</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{!! route('register') !!}">Регистрация</a>
                 </li>
                 <li class="nav-item">
-                    @if(\Auth::user()->isAdmin == 1)
-                    <a class="nav-link" href="{!! route('admin') !!}">В админку</a>
-                        @endif
+                    @if(\Auth::user()->isAdmin == \App\User::ADMIN_ROLE)
+                        <a class="nav-link" href="{!! route('admin') !!}">В админку</a>
+                    @endif
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{!! route('logout') !!}">Выйти</a>
                 </li>
 
 
-            </ul>
+
+
         </div>
     </div>
 </nav>
@@ -110,11 +112,11 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-<script>tinymce.init({selector:'textarea'});</script>
+
 <script src="/blog/vendor/jquery/jquery.min.js"></script>
 <script src="/blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+<script>tinymce.init({selector:'textarea'});</script>
 <!-- Custom scripts for this template -->
 <script src="/blog/js/clean-blog.min.js"></script>
 

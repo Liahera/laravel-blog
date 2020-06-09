@@ -8,6 +8,9 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    const ADMIN_ROLE = 1;
+    const USER_ROLE = 0;
+
     use Notifiable;
     protected $table="users";
     protected $primaryKey="id";
@@ -18,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-         'email', 'password',
+         'email', 'password','username',
     ];
 
     /**
@@ -37,6 +40,7 @@ class User extends Authenticatable
      */
     protected $casts = [
 
+        'username'       => 'string',
         'id'             => 'integer',
         'email'          => 'string',
         'password'       => 'string',
