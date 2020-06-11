@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/blog/css/clean-blog.css?v=1.2" rel="stylesheet">
+    <link href="/css/style.css?v=1.2" rel="stylesheet">
 
 </head>
 
@@ -28,7 +29,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="header-menu">
-        <a class="navbar-brand" href="/">Serhii Liahera</a>
+        <a class="navbar-brand" href="/">Сайт</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
@@ -41,21 +42,39 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">О нас</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{!! route('login') !!}">Логин</a>
-                </li>
+            </ul>
+            @if(\Auth::user() == null)
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{!! route('register') !!}">Регистрация</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{!! route('login') !!}">Логин</a>
+            </li>
+            </ul>
+            @endif
+            @if(\Auth::user() != null)
+            <ul class="navbar-nav ml-auto">
+                <li class="main-li nav-item">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                            {{ \Auth::user()->username}}
+                    </a>
+                    <ul class="dropdown-menu dropdown-user-info" role="menu">
+                        <li class="nav-item">
+                            @if(\Auth::user() != null)
+                                @if(\Auth::user()->isAdmin == \App\User::ADMIN_ROLE)
+                                    <a class="nav-link" href="{!! route('admin') !!}">В админку</a>
+                                @endif
+                            @endif
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{!! route('logout') !!}">Выйти</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{!! route('register') !!}">Регистрация</a>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    @if(\Auth::user()->isAdmin == \App\User::ADMIN_ROLE)
-                        <a class="nav-link" href="{!! route('admin') !!}">В админку</a>
-                    @endif
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{!! route('logout') !!}">Выйти</a>
-                </li>
+            </ul>
+                @endif
 
 
 
@@ -103,7 +122,7 @@
                   </span>
                         </a>
                     </li>
-                    </li>
+
                 </ul>
                 <p class="copyright text-muted"> &copy; Liahera Serhii 2020</p>
             </div>
@@ -123,3 +142,4 @@
 </body>
 
 </html>
+

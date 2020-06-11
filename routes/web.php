@@ -16,15 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'ArticlesController@index');
 
 //blog
+Route::get('/register','Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('/register', 'Auth\RegisterController@register');
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/login', 'Auth\LoginController@login');
+
 Route::get('/article/{id}/{slug}.html', 'ArticlesController@showArticle')->name('blog.show');
 
-Route::group(['middleware' => 'guest'], function (){
-    Route::get('/register','Auth\RegisterController@showRegistrationForm')->name('register');
-    Route::post('/register', 'Auth\RegisterController@register');
-    Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-    Route::post('/login', 'Auth\LoginController@login');
 
-});
+
+
 //account
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/logout', function(){

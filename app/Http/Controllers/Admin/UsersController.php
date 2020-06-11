@@ -11,7 +11,6 @@ class UsersController extends Controller
     public function index()
     {
         $users = (new User())->get();
-
         $params = [
             'users' => $users
         ];

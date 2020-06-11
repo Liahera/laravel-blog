@@ -1,0 +1,11 @@
+a:hover {
+    text-decoration: none;
+}
+
+.main-li {
+    position: relative;
+}
+
+.dropdown-user-info {
+    left: 10px;
+}

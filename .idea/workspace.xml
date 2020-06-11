@@ -4,17 +4,12 @@
     <list default="true" id="d07c4ec6-7786-468a-925e-f0a746805306" name="Default Changelist" comment="v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog/css/clean-blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/css/clean-blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/show_article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show_article.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +39,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="6e420a4a-1b89-42cf-9ba6-f8e265c955f0" name="localhost" />
+      <server host="127.0.0.1" id="ad456818-7644-4c22-b744-ac3bd6923522" name="127.0.0.1" port="8000" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -171,7 +173,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -182,11 +184,18 @@
       <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\views\layouts" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Remote Debug.XDebug">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="XDebug" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="localhost" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Remote Debug.XDebug" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -214,7 +223,8 @@
       <workItem from="1591444756342" duration="4525000" />
       <workItem from="1591521458437" duration="24640000" />
       <workItem from="1591634611502" duration="13842000" />
-      <workItem from="1591712359721" duration="10313000" />
+      <workItem from="1591712359721" duration="10979000" />
+      <workItem from="1591874805469" duration="17542000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1590003047657</created>
@@ -313,10 +323,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1590005217137" />
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590605049906">
+    <state x="348" y="70" key="#Servers" timestamp="1591877479872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590605049906" />
+    <state x="348" y="70" key="#Servers/0.0.1536.824@0.0.1536.824" timestamp="1591877479872" />
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591877537594">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1591877537594" />
     <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591641793789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -333,22 +347,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590436877197" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1590923159102">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1591887869243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590923159102" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1590923159102">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1591887869243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590923159102" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1590923159102">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1591887869242">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590923159102" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1590923159102">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591887869242" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1591887869243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590923159102" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1591887869243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1591887869243" />
     <state x="441" y="247" key="NewPhpClassDialog" timestamp="1591384794383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -357,10 +403,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="948" y="424" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1591635538879" />
-    <state x="279" y="58" key="SettingsEditor" timestamp="1591634651324">
+    <state x="553" y="310" key="PhpMappingAdvancedResolveDialog" timestamp="1591878073383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591634651324" />
+    <state x="553" y="310" key="PhpMappingAdvancedResolveDialog/0.0.1536.824@0.0.1536.824" timestamp="1591878073383" />
+    <state x="340" y="59" key="SettingsEditor" timestamp="1591877216385">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="340" y="59" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591877216385" />
     <state x="722" y="151" key="Vcs.Push.Dialog.v2" timestamp="1591031857498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -369,6 +419,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1590428487562" />
+    <state x="332" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1591878132733">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="332" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1591878132733" />
     <state x="361" y="74" key="scopes" timestamp="1590080254038">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -377,5 +431,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="874" y="132" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590827437915" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/show_article.blade.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -10,8 +10,8 @@
                         <h1>{!! $article->title !!}</h1>
                         <h2 class="subheading">{!! $article->short_text !!}</h2>
                         <span class="meta"> Опубликовал
-                <a href="#">{{$article->author}}</a>
-                 в {!! $article->created_at->format('H:i - d/m/Y') !!}</span>
+                        <a href="#">{{$article->author}}</a>
+                        в {!! $article->created_at->format('H:i - d/m/Y') !!}</span>
                     </div>
                 </div>
             </div>
@@ -31,12 +31,11 @@
         <div class="col-md-8 col-md-offset-2">
             @foreach($comments as $comment)
                 <div class="comment" style="border:1px solid #004085;">
-                    <p>{{_user($comment->user_id)->email}}</p>
+                    <p>{{_user($comment->user_id)->username}}</p>
                     <p>{{$comment->created_at->format('d-m-Y')}}</p>
                     <p>{!! $comment->comment !!}</p>
                 </div>
             @endforeach
-
         <br><br>
         <hr>
         <br>
@@ -49,8 +48,12 @@
                 <br>
                 <button type="submit" class="btn btn-success" style="cursor:pointer;">Добавить комментарий</button>
             </form>
-            @endif
+        @endif
         </div>
     </article>
+
+
+
+
 
 @stop
