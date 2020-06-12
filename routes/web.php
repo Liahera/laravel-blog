@@ -20,7 +20,9 @@ Route::get('/register','Auth\RegisterController@showRegistrationForm')->name('re
 Route::post('/register', 'Auth\RegisterController@register');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');
-
+Route::get('/about','AboutController@about')->name('about');
+Route::get('/contact','ContactController@showcontact')->name('contact');
+Route::post('/contact/submit', 'ContactController@submit')->name('contact_submit');
 Route::get('/article/{id}/{slug}.html', 'ArticlesController@showArticle')->name('blog.show');
 
 

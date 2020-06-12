@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Serhii Liahera</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/blog/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,10 @@
                     <a class="nav-link" href="/">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">О нас</a>
+                    <a class="nav-link" href="{!! route('about') !!}">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{!! route('contact') !!}">Контакти</a>
                 </li>
             </ul>
             @if(\Auth::user() == null)

@@ -4,7 +4,9 @@
 namespace App\Models;
 
 
-class Contacts
+use Illuminate\Database\Eloquent\Model;
+
+class Contacts extends Model
 {
 
 }
