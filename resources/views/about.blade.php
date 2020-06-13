@@ -21,7 +21,7 @@
 
     <div class="container">
 
-        <h1>Чтото про себя</h1>
+        <h1> про себя</h1>
 
     </div>
     @stop

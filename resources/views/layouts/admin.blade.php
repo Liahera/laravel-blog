@@ -64,6 +64,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{!! route('comments') !!}">Комментарии</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{!! route('messages') !!}">Сообщения</a>
+                </li>
             </ul>
 
 

@@ -38,6 +38,7 @@ Route::group(['middleware' => 'auth'], function(){
     //comments
     Route::post('/comments/add', 'CommentsController@addComment')->name('comments.add');
     Route::delete('/comments/delete', 'Admin\CommentsController@deleteComment')->name('comments.delete');
+    Route::delete('/messages/delete', 'Admin\MessagesController@deleteMessages')->name('messages.delete');
         // admin
     Route::group(['middleware' => 'admin','prefix'=>'admin'], function() {
         Route::get('/', 'Admin\AccountController@index')->name('admin');
@@ -68,6 +69,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/comments', 'Admin\CommentsController@index')->name('comments');
         Route::get('/comments/accepted/{id}', 'Admin\CommentsController@acceptComment')
             ->where('id', '\d+')->name('comment.accepted');
+        Route::get('/messages', 'Admin\MessagesController@index')->name('messages');
     });
 });
 
