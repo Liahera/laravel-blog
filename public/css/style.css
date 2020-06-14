@@ -9,3 +9,9 @@ a:hover {
 .dropdown-user-info {
     left: 10px;
 }
+
+.navbar-collapse {
+    justify-content: space-between;
+}
+
+

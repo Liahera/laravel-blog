@@ -36,6 +36,7 @@
                     <p>{!! $comment->comment !!}</p>
                 </div>
             @endforeach
+
         <br><br>
         <hr>
         <br>

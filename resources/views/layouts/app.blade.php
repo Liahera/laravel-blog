@@ -35,7 +35,7 @@
             <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Главная</a>
                 </li>
@@ -47,7 +47,7 @@
                 </li>
             </ul>
             @if(\Auth::user() == null)
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="{!! route('register') !!}">Регистрация</a>
             </li>
@@ -57,7 +57,7 @@
             </ul>
             @endif
             @if(\Auth::user() != null)
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav">
                 <li class="main-li nav-item">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
                             {{ \Auth::user()->username}}

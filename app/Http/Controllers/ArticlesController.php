@@ -9,7 +9,7 @@ class ArticlesController extends Controller
     public function index()
     {
         $objArticle = new Article();
-        $articles = $objArticle->orderBy('id', 'desc')->paginate(10);
+        $articles = $objArticle->orderBy('id', 'desc')->paginate(3);
 
         return view('index', ['articles' => $articles]);
     }
