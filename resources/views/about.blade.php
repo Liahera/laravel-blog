@@ -14,14 +14,27 @@
                          </span>
                     </div>
                 </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    <article>
+
+        <div class="container">
+            <div class="row">
+                @foreach($abouts as $about)
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    {!!  $about->full_text!!}
+                </div>
+                @endforeach
             </div>
         </div>
-    </header>
+
+    </article>
 
 
-    <div class="container">
 
-        <h1> про себя</h1>
 
-    </div>
     @stop

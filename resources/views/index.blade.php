@@ -38,18 +38,17 @@
                             в {!! $article->created_at->format('H:i- d/m/Y') !!}</p>
                     </div>
 @endforeach
+            <!-- Pager -->
+                    <div class="pagination col-lg-12 col-md-12 col-sm-12 text-center">
+                        <ul class="pagination" role="navigation">
+                            {{$articles->links()}}
+                        </ul>
+                    </div>
 
-
-
-                <hr>
-                <!-- Pager -->
-
-                        <div class="clearfix">
-                    {{$articles->links()}}
-                         </div>
 
             </div>
         </div>
     </div>
 
 @stop
+

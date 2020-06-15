@@ -42,6 +42,8 @@ Route::group(['middleware' => 'auth'], function(){
         // admin
     Route::group(['middleware' => 'admin','prefix'=>'admin'], function() {
         Route::get('/', 'Admin\AccountController@index')->name('admin');
+        Route::get('/abouts', 'Admin\AccountController@about')->name('abouts');
+        Route::post('/abouts/submit', 'Admin\AccountController@submit')->name('abouts_submit');
         /** Categories */
         Route::get('/categories','Admin\CategoriesController@index')->name('categories');
         Route::get('/categories/add','Admin\CategoriesController@addCategory')->name('categories.add');
@@ -70,6 +72,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/comments/accepted/{id}', 'Admin\CommentsController@acceptComment')
             ->where('id', '\d+')->name('comment.accepted');
         Route::get('/messages', 'Admin\MessagesController@index')->name('messages');
+
     });
 });
 

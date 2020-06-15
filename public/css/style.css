@@ -13,5 +13,11 @@ a:hover {
 .navbar-collapse {
     justify-content: space-between;
 }
+.pagination {
+
+    padding-left: 50px;
+    margin: 10px 0;
+
+}
 
 

@@ -40,11 +40,12 @@
                     <a class="nav-link" href="/">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{!! route('about') !!}">О нас</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{!! route('contact') !!}">Контакти</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{!! route('about') !!}">О нас</a>
+                </li>
+
             </ul>
             @if(\Auth::user() == null)
             <ul class="navbar-nav">

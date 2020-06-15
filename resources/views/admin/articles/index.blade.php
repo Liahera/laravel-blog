@@ -5,6 +5,11 @@
         <br>
         <a href="{!! route('articles.add') !!}" class="btn btn-info">Добавить статью</a>
         <br><br><br>
+        <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Поиск">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+        </form>
+        <br><br><br>
         <table class="table table-bordered">
             <tr>
                 <th>#</th>

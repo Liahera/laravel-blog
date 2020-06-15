@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d07c4ec6-7786-468a-925e-f0a746805306" name="Default Changelist" comment="v2">
+      <change afterPath="$PROJECT_DIR$/app/Entities/Abouts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AboutsRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/about.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/show_article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show_article.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,13 +183,13 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\views\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\app\Http\Controllers" />
       <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\views\admin\messages" />
       <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\js" />
-      <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\app\Http\Controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Liahera\Downloads\OSPanel\domains\laravel-blog\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Remote Debug.XDebug">
@@ -228,7 +236,8 @@
       <workItem from="1591978874537" duration="13780000" />
       <workItem from="1592043728183" duration="12044000" />
       <workItem from="1592077472873" duration="201000" />
-      <workItem from="1592126053254" duration="4773000" />
+      <workItem from="1592126053254" duration="10447000" />
+      <workItem from="1592241801618" duration="10068000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1590003047657</created>
@@ -335,10 +344,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1591877537594" />
-    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592050585442">
+    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592250561213">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1592050585442" />
+    <state x="34" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1592250561213" />
     <state x="465" y="98" width="620" height="628" key="#phpunit.xml" timestamp="1591448786979">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -399,14 +408,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1591898093010" />
-    <state x="456" y="247" key="NewPhpClassDialog" timestamp="1592044971504">
+    <state x="456" y="247" key="NewPhpClassDialog" timestamp="1592245531685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="456" y="247" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1592044971504" />
-    <state x="948" y="424" key="NewPhpFileDialog" timestamp="1592046958931">
+    <state x="456" y="247" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1592245531685" />
+    <state x="948" y="424" key="NewPhpFileDialog" timestamp="1592136441849">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="948" y="424" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1592046958931" />
+    <state x="948" y="424" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1592136441849" />
     <state x="553" y="310" key="PhpMappingAdvancedResolveDialog" timestamp="1591878073383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
