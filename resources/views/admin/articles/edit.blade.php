@@ -21,7 +21,6 @@
         </form>
     </main>
     <script>
-        CKEDITOR.replace( 'short_text' );
         CKEDITOR.replace( 'full_text' );
     </script>
 @stop

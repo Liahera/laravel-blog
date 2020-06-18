@@ -44,6 +44,9 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/', 'Admin\AccountController@index')->name('admin');
         Route::get('/abouts', 'Admin\AccountController@about')->name('abouts');
         Route::post('/abouts/submit', 'Admin\AccountController@submit')->name('abouts_submit');
+        Route::get('/abouts/edit/{id}', 'Admin\AccountController@editAbouts')->where('id', '\d+')->name('editAbout');
+        Route::post('/abouts/edit/{id}', 'Admin\AccountController@editRequestAbouts')->where('id', '\d+');
+        Route::delete('/abouts/delete', 'Admin\AccountController@deleteAbouts')->name('abouts.delete');
         /** Categories */
         Route::get('/categories','Admin\CategoriesController@index')->name('categories');
         Route::get('/categories/add','Admin\CategoriesController@addCategory')->name('categories.add');

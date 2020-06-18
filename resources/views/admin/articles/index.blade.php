@@ -30,6 +30,7 @@
             @endforeach
         </table>
     </main>
+
 @stop
 @section('js')
     <script>

@@ -10,10 +10,51 @@
             <br><br>
 
         </form>
+
+        <table class="table table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Текст</th>
+                <th>Действия</th>
+                <br>
+                <br>
+                <br>
+            </tr>
+            @foreach($abouts as $about)
+                <tr>
+                <td>{{$about->id}}</td>
+                <td>  {!!  $about->full_text!!}</td>
+                    <td><a href="{!! route('editAbout', ['id' => $about->id]) !!}">Редактировать</a> ||
+                    <a href="javascript:;" class="delete" rel="{{$about->id}}">Удалить</a></td>
+                </tr>
+            @endforeach
+        </table>
     </main>
-        <script>
-            CKEDITOR.replace( 'full_text' );
-        </script>
+    <script>
 
+        CKEDITOR.replace( 'full_text' );
+    </script>
 @stop
+@section('js')
 
+    <script>
+        $(function(){
+            $(".delete").on('click', function () {
+                if(confirm("Вы действительно хотите удалить эту запись ?")) {
+                    let id = $(this).attr("rel");
+                    $.ajax({
+                        type: "DELETE",
+                        url: "{!! route('abouts.delete') !!}",
+                        data: {_token:"{{csrf_token()}}", id:id},
+                        complete: function() {
+                            alert("Запись О нас  удалена");
+                            location.reload();
+                        }
+                    });
+                }else{
+                    alertify.error("Дествие отменено пользователем");
+                }
+            });
+        });
+    </script>
+@stop

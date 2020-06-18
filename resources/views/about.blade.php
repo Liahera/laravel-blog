@@ -10,7 +10,7 @@
                         <h1>Страница про нас</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
-                        <a>    Псевдо програмист  </a>
+                        <a>     </a>
                          </span>
                     </div>
                 </div>

@@ -37,7 +37,7 @@
                             <a href="#">{{$article->author}}</a>
                             в {!! $article->created_at->format('H:i- d/m/Y') !!}</p>
                     </div>
-@endforeach
+                @endforeach
             <!-- Pager -->
                     <div class="pagination col-lg-12 col-md-12 col-sm-12 text-center">
                         <ul class="pagination" role="navigation">
