@@ -6,14 +6,12 @@
         <br>
         <form  action="" method="post">
             {!! csrf_field() !!}
-            <p>Введите текст:<br><textarea name="full_text" class="form-control" ></textarea></p>
+            <p>Введите текст:<br><textarea name="full_text" class="form-control" >{!! $object->full_text !!}</textarea></p>
             <button type="submit" class="btn btn-success"  style="cursor: pointer; float: right;" >Редактировать</button>
             <br><br>
-
         </form>
     </main>
     <script>
-
         CKEDITOR.replace( 'full_text' );
     </script>
 @stop

@@ -10,16 +10,19 @@
                         <h1>Страница Контактов</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
-                        <a>      </a>
+                        <a>    </a>
                          </span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-
-    <div class="container">
+<div class="container-row">
+<div class="container-map">
+    <h1>Моя геолокация</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59877.76249321136!2d18.60646360953683!3d54.37924525886458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd74982458b837%3A0x96bf68ff438978af!2sGdansk%20University%20of%20Technology%20Dormitory%20No.%209!5e0!3m2!1sru!2spl!4v1592645209956!5m2!1sru!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+    <div class="container-form">
 <h1>Связаться со мной</h1>
         @if($errors->any())
             <div class="alert alert-danger">
@@ -65,6 +68,7 @@
             <button type="submit" class="btn btn-success">Отправить</button>
         </form>
 
+    </div>
     </div>
 
 @stop

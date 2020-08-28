@@ -19,5 +19,14 @@ a:hover {
     margin: 10px 0;
 
 }
+.container-row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-around;
+}
+
+.container-form {
+    width: 40%;
+}
 
 

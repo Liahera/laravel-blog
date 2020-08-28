@@ -1,19 +1,18 @@
 @extends('layouts.admin')
 @section('content')
     <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+        @if(!DB::table('abouts')->get()->count())
         <h1>Добавление Информации на страничку о нас</h1>
-
         <form  action="{!!  route('abouts_submit')!!}" method="post">
             {!! csrf_field() !!}
             <p>Введите текст:<br><textarea name="full_text" class="form-control"></textarea></p>
             <button type="submit" class="btn btn-success" style="cursor: pointer; float: right;">Добавить</button>
             <br><br>
-
         </form>
-
+        @endif
         <table class="table table-bordered">
             <tr>
-                <th>#</th>
+
                 <th>Текст</th>
                 <th>Действия</th>
                 <br>
@@ -22,7 +21,7 @@
             </tr>
             @foreach($abouts as $about)
                 <tr>
-                <td>{{$about->id}}</td>
+                
                 <td>  {!!  $about->full_text!!}</td>
                     <td><a href="{!! route('editAbout', ['id' => $about->id]) !!}">Редактировать</a> ||
                     <a href="javascript:;" class="delete" rel="{{$about->id}}">Удалить</a></td>

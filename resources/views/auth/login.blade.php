@@ -16,7 +16,9 @@
             </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти на сайт</button>
-    </form>
+        <br>
+         <a href="{{ route('register')  }} " class="btn btn-lg btn-primary btn-block">Регистрация</a>
+
 
 </div> <!-- /container -->
 

@@ -423,3 +423,8 @@ footer .copyright {
     width: 100%;
     display: flex;
 }
+.btn-success {
+    color: #f8f9fa;
+    background-color: #0c5460;
+    border-color: #dc3545;
+}

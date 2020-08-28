@@ -12,46 +12,37 @@ class AccountController extends Controller
         return view("admin.index");
         //echo 'hello admin';
     }
+
     public function about(){
         $objAbouts = (new Abouts())->get();
         $abouts = $objAbouts;
         $params= ['abouts' => $abouts];
 
         return view('admin.about',$params);
-
-
     }
+
     public function submit(AboutsRequest $reg)
     {
-
-
         $abouts = new Abouts();
         $abouts->full_text = $reg->input('full_text');
-
 
         $abouts->save();
 
         return redirect()->route('abouts')->with('success', 'Описание было добавлено');
     }
+
     public function editAbouts(int $id)
     {
-        $objAbouts = new Abouts();
-        $abouts = $objAbouts->get();
         $objAbouts = Abouts::find($id);
         if (!$objAbouts) {
             return abort(404);
         }
 
-        $mainAbouts = $objAbouts->full_text;
-        $arrAbouts = [];
-
-
-
         return view('admin.editAbout', [
-            'full_text' => $abouts,
-
+            'object' => $objAbouts,
         ]);
     }
+
     public function editRequestAbouts(int $id, AboutsRequest $request)
     {
         $objAbouts = Abouts::find($id);
@@ -59,18 +50,13 @@ class AccountController extends Controller
             return abort(404);
         }
 
-
         $objAbouts->full_text = $request->input('full_text');
 
         $objAbouts->save();
 
-
-
-            return redirect()->route('abouts');
-
-
-
+        return redirect()->route('abouts');
     }
+
     public function deleteAbouts(Request $request)
     {
         if ($request->ajax()) {
